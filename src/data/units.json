@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "anekdot",
+    "name": "anekdot.",
+    "tagline": "Arkeologi keseharian Indonesia",
+    "since": 2026,
+    "description": "Video pendek dan esai tentang asal-usul kebiasaan, makanan, uang, mitos, dan kebijakan di sekitar kita.",
+    "logo": "/assets/anekdot_logo.svg",
+    "color": "#F2B705",
+    "url": "https://anekdot.id/",
+    "cta": "Kunjungi anekdot.id",
+    "links": [
+      { "label": "YouTube", "url": "https://www.youtube.com/@anekdot_id" },
+      { "label": "Instagram", "url": "https://www.instagram.com/anekdot.id/" },
+      { "label": "TikTok", "url": "https://www.tiktok.com/@anekdot.id" }
+    ]
+  }
+]

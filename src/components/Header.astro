@@ -1,0 +1,26 @@
+---
+const nav = [
+  { mark: 'a', label: 'kisah', href: '#kisah' },
+  { mark: 'be', label: 'naungan', href: '#naungan' },
+  { mark: 'ce', label: 'cerita', href: '#cerita' },
+];
+---
+<header>
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="abece, beranda"><img src="/assets/abece-wordmark.svg" alt="a·be·ce" /></a>
+    <nav aria-label="Navigasi">
+      {nav.map((n) => <a href={n.href}><b>{n.mark}</b>{n.label}</a>)}
+    </nav>
+  </div>
+</header>
+
+<style>
+  header { padding: 28px 0; }
+  header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .logo img { height: 34px; display: block; }
+  nav { display: flex; gap: 28px; font-size: 15px; font-weight: 500; }
+  nav a { text-decoration: none; color: var(--muted); }
+  nav a b { font-family: var(--round); color: var(--teal); font-weight: 700; margin-right: 6px; }
+  nav a:hover { color: var(--ink); }
+  @media (max-width: 760px) { nav { display: none; } }
+</style>

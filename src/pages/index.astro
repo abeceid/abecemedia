@@ -1,0 +1,105 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Section from '../components/Section.astro';
+import UnitCard from '../components/UnitCard.astro';
+import Timeline from '../components/Timeline.astro';
+import Footer from '../components/Footer.astro';
+import site from '../data/site.json';
+import units from '../data/units.json';
+import timeline from '../data/timeline.json';
+
+// Timeline baru tampil kalau tonggaknya sudah cukup bermakna.
+const showTimeline = timeline.length >= 4;
+---
+<Base>
+  <Header />
+
+  <main>
+    <section class="wrap hero">
+      <p class="eyebrow">Semarang · sejak {site.founded}</p>
+      <h1>semua cerita dimulai dari <span class="abc">a<span class="dot">·</span>be<span class="dot">·</span>ce.</span></h1>
+      <p class="lead">
+        <strong>abece</strong> adalah rumah untuk cerita-cerita unik yang kita lalui setiap hari. Kami percaya cerita
+        yang baik bisa membuat hal biasa terasa istimewa, dan mendekatkan kita: pada sejarah, pada sesama, dan pada
+        diri sendiri. Komitmen kami sederhana: membawakan <strong>cerita baik, setiap hari</strong>, dalam rupa apa pun.
+      </p>
+    </section>
+
+    <Section id="kisah" mark="a" label="kisah">
+      <h2>Berawal dari satu pertanyaan.</h2>
+      <p>
+        abece didirikan di Semarang pada {site.founded}, dari kebiasaan sederhana: bertanya "kenapa begini?" tentang
+        hal-hal sehari-hari. Kenapa kucing dipanggil "pus"? Kenapa amplop kondangan dicatat? Kenapa kita merasa{' '}
+        <strong>belum makan kalau belum ketemu nasi</strong>?
+      </p>
+      <p>
+        Namanya kami ambil dari cara kita pertama kali belajar membaca: <strong>a, be, ce</strong>, dieja seperti orang
+        Indonesia mengejanya. Titik di antara suku katanya adalah jeda saat mengeja: ruang kecil untuk bertanya sebelum
+        melangkah ke huruf berikutnya. Setiap cerita, dan setiap pengetahuan, dimulai dari sana.
+      </p>
+      <p>
+        <strong>Tujuan kami:</strong> membuat pengetahuan tentang keseharian Indonesia mudah dinikmati, bisa dicek
+        sumbernya, dan tidak menggurui.
+      </p>
+      <div class="pegangan">
+        <div><h3>Bersumber</h3><p>Setiap angka dan klaim punya rujukan yang kami cantumkan.</p></div>
+        <div><h3>Mengoreksi</h3><p>Kalau kami salah, kami ralat secara terbuka.</p></div>
+        <div><h3>Menjelaskan</h3><p>Boleh jenaka dan satir, tapi tujuannya memahami, bukan menghakimi.</p></div>
+      </div>
+      {showTimeline && <Timeline items={timeline} />}
+    </Section>
+
+    <Section id="naungan" mark="be" label="naungan">
+      <h2>Yang kami naungi.</h2>
+      {units.map((u) => <UnitCard {...u} />)}
+    </Section>
+
+    <Section id="cerita" mark="ce" label="cerita">
+      <h2>Punya cerita, koreksi, atau ajakan kolaborasi?</h2>
+      <p>Kabari kami. Banyak topik Anekdot berawal dari pertanyaan pembaca.</p>
+      <div class="kontak">
+        <div><small>Surel</small><a href={`mailto:${site.contact.email}`}>{site.contact.email}</a></div>
+        <div>
+          <small>Instagram</small>
+          <a href={`https://www.instagram.com/${site.contact.instagram}/`} rel="noopener">@{site.contact.instagram}</a>
+        </div>
+      </div>
+    </Section>
+  </main>
+
+  <Footer />
+</Base>
+
+<style>
+  .hero { padding-top: 80px; padding-bottom: 112px; }
+  .eyebrow {
+    margin: 0 0 24px; font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--teal);
+  }
+  h1 {
+    font: 800 clamp(44px, 7.6vw, 96px)/1.02 var(--sans);
+    letter-spacing: -0.04em;
+    margin: 0 0 32px;
+    max-width: 13ch;
+  }
+  .abc { font-family: var(--round); font-weight: 700; letter-spacing: -0.02em; white-space: nowrap; }
+  .lead { font-size: clamp(18px, 2.2vw, 21px); color: var(--muted); max-width: 44ch; margin: 0; }
+  .lead strong { color: var(--ink); font-weight: 700; }
+
+  .pegangan { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
+  .pegangan div { border-top: 3px solid var(--teal); padding-top: 16px; }
+  .pegangan h3 { font: 700 18px/1.3 var(--sans); margin: 0 0 6px; }
+  .pegangan p { font-size: 15px; margin: 0; }
+
+  .kontak { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 28px; max-width: 620px; }
+  .kontak small { display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+  .kontak a { font-size: 19px; font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--teal-light); }
+  .kontak a:hover { border-color: var(--teal); }
+
+  @media (max-width: 760px) {
+    .hero { padding-top: 32px; padding-bottom: 72px; }
+    .pegangan { grid-template-columns: 1fr; gap: 20px; }
+    .kontak { grid-template-columns: 1fr; }
+  }
+</style>

@@ -1,0 +1,32 @@
+---
+interface Props {
+  id: string;
+  mark: string;
+  label: string;
+}
+const { id, mark, label } = Astro.props;
+---
+<section class="sec" id={id}>
+  <div class="wrap">
+    <div class="mark">{mark}<span class="dot">·</span><small>{label}</small></div>
+    <div class="body"><slot /></div>
+  </div>
+</section>
+
+<style>
+  .sec { border-top: 1px solid var(--line); padding-top: 64px; padding-bottom: 64px; }
+  .sec .wrap { display: grid; grid-template-columns: 220px 1fr; gap: 40px; }
+  .mark { font: 700 112px/0.8 var(--round); letter-spacing: -0.03em; }
+  .mark .dot { font-size: 0.5em; vertical-align: 0.35em; margin-left: 2px; }
+  .mark small {
+    display: block; margin-top: 18px;
+    font: 600 13px/1 var(--sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+  }
+  .body :global(p) { margin: 0 0 16px; color: var(--muted); max-width: 60ch; }
+  .body :global(p strong) { color: var(--ink); }
+  @media (max-width: 760px) {
+    .sec { padding-top: 48px; padding-bottom: 48px; }
+    .sec .wrap { grid-template-columns: 1fr; gap: 20px; }
+    .mark { font-size: 80px; }
+  }
+</style>

@@ -1,0 +1,27 @@
+:root {
+  --ink: #1B2326;
+  --teal: #0E7C86;
+  --teal-light: #3FB3BC;
+  --cream: #F4F1EA;
+  --paper: #FBFAF6;
+  --muted: #5B666A;
+  --line: #DDD8CC;
+  --sans: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --round: "Comfortaa", var(--sans);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font: 400 17px/1.65 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+.dot { color: var(--teal); }
+h2 { font: 700 clamp(28px, 3.6vw, 38px)/1.18 var(--sans); letter-spacing: -0.025em; margin: 0 0 18px; max-width: 24ch; }
+@media (max-width: 760px) {
+  .wrap { padding-left: 16px; padding-right: 16px; }
+}
