@@ -4,7 +4,7 @@ import site from '../data/site.json';
 <footer>
   <div class="wrap">
     <img src="/assets/abece-wordmark-gelap.svg" alt="a·be·ce" />
-    <span>Didirikan di {site.city} · © {site.founded} {site.name}</span>
+    <span>Didirikan di {site.city} · © {site.founded} {site.name} · <a href="/privasi">Privasi</a> · <a href="/ketentuan">Ketentuan</a></span>
   </div>
 </footer>
 
@@ -12,4 +12,5 @@ import site from '../data/site.json';
   footer { background: var(--ink); color: rgba(244, 241, 234, 0.72); padding: 40px 0; font-size: 14px; }
   footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
   img { height: 26px; display: block; }
+  a { color: inherit; }
 </style>

@@ -1,0 +1,86 @@
+---
+import Legal from '../components/Legal.astro';
+import site from '../data/site.json';
+---
+<Legal title="Kebijakan Privasi" updated="24 Oktober 2026">
+  <p>
+    Kebijakan ini menjelaskan data apa yang dikumpulkan oleh abece, termasuk situs-situs di bawah naungannya (abece.my.id,
+    anekdot.id) dan alat penerbitan internal kami, <strong>abece</strong> (pub.abece.my.id), serta bagaimana data itu
+    digunakan.
+  </p>
+
+  <h2>1. Alat penerbitan abece</h2>
+  <p>
+    abece adalah alat internal yang kami pakai untuk menjadwalkan dan menerbitkan konten ke akun media sosial
+    <strong>milik kami sendiri</strong> (Anekdot dan takardata) di TikTok, Instagram, Facebook, Threads, dan YouTube.
+    Alat ini tidak dibuka untuk umum dan hanya dipakai oleh tim redaksi abece.
+  </p>
+  <h3>Data yang kami akses</h3>
+  <ul>
+    <li>Informasi profil dasar akun yang dihubungkan, misalnya nama pengguna, nama tampilan, dan foto profil, untuk
+      memastikan konten diterbitkan ke akun yang benar.</li>
+    <li>Token akses yang diberikan platform setelah pemilik akun menyetujui izin, untuk menerbitkan video, foto, dan
+      teks ke akun tersebut.</li>
+    <li>Status dan tautan postingan yang sudah diterbitkan, untuk catatan jadwal kami.</li>
+  </ul>
+  <p>
+    Kami tidak membaca pesan pribadi, tidak mengumpulkan data pengikut atau pengguna lain, dan tidak menjual atau
+    membagikan data apa pun kepada pihak ketiga.
+  </p>
+  <h3>Penyimpanan dan penghapusan</h3>
+  <p>
+    Token dan antrean postingan disimpan di server kami sendiri dan hanya bisa diakses oleh tim redaksi. Izin dapat
+    dicabut kapan saja melalui pengaturan aplikasi terhubung di masing-masing platform. Setelah izin dicabut, token
+    tidak lagi berlaku dan kami menghapusnya dari server. Permintaan penghapusan data juga bisa dikirim ke
+    <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>.
+  </p>
+
+  <h2>2. Situs web</h2>
+  <p>
+    Situs kami dapat memakai layanan analitik (Cloudflare Web Analytics dan Google Analytics) untuk menghitung
+    kunjungan secara agregat. Data ini tidak kami pakai untuk mengenali pembaca secara pribadi. Kalau kamu mendaftar
+    sebagai anggota atau berlangganan buletin di anekdot.id, kami menyimpan alamat surel yang kamu berikan, hanya untuk
+    mengirim tulisan, dan kamu bisa berhenti berlangganan kapan saja.
+  </p>
+
+  <h2>3. Perubahan dan kontak</h2>
+  <p>
+    Kebijakan ini dapat diperbarui sewaktu-waktu, dengan tanggal pembaruan tercantum di atas. Pertanyaan tentang privasi:
+    <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>.
+  </p>
+
+  <hr />
+  <h2 lang="en">Privacy Policy (English)</h2>
+  <div lang="en">
+    <p>
+      This policy covers abece, its websites (abece.my.id, anekdot.id) and our internal publishing tool,
+      <strong>abece</strong> (pub.abece.my.id).
+    </p>
+    <h3>Publishing tool</h3>
+    <p>
+      abece is an internal tool used only by the abece editorial team to schedule and publish content to social media
+      accounts <strong>that we own</strong> (Anekdot and takardata) on TikTok, Instagram, Facebook, Threads and YouTube.
+      It is not offered to the public.
+    </p>
+    <ul>
+      <li>We access basic profile information of the connected account (username, display name, avatar) to confirm the
+        destination account.</li>
+      <li>We store the access tokens granted by the platform after the account owner authorizes the app, and use them
+        solely to publish videos, photos and text to that account.</li>
+      <li>We keep the status and links of published posts for our own schedule records.</li>
+    </ul>
+    <p>
+      We do not read private messages, collect data about followers or other users, or sell or share any data with
+      third parties. Tokens and the post queue are stored on our own server, accessible only to the editorial team.
+      Access can be revoked at any time from each platform's connected-apps settings; revoked tokens are deleted from our
+      server. Data deletion requests: <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>.
+    </p>
+    <h3>Websites</h3>
+    <p>
+      Our websites may use aggregate analytics (Cloudflare Web Analytics, Google Analytics). Newsletter subscribers'
+      email addresses are used only to send our writing and can be removed at any time.
+    </p>
+    <h3>Contact</h3>
+    <p>Questions about this policy: <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>.</p>
+  </div>
+</Legal>

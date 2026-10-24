@@ -1,0 +1,61 @@
+---
+import Legal from '../components/Legal.astro';
+import site from '../data/site.json';
+---
+<Legal title="Ketentuan Layanan" updated="24 Oktober 2026">
+  <p>
+    Ketentuan ini berlaku untuk situs-situs abece (abece.my.id, anekdot.id) dan alat penerbitan internal kami,
+    <strong>abece</strong> (pub.abece.my.id).
+  </p>
+
+  <h2>1. Alat penerbitan abece</h2>
+  <ul>
+    <li>abece adalah alat internal untuk menjadwalkan dan menerbitkan konten ke akun media sosial milik abece sendiri
+      (Anekdot dan takardata). Alat ini hanya boleh dipakai oleh tim redaksi abece yang diberi akses.</li>
+    <li>Setiap akun dihubungkan oleh pemiliknya melalui halaman izin resmi platform (TikTok, Instagram, Facebook,
+      Threads, YouTube). Izin dapat dicabut kapan saja dari pengaturan platform.</li>
+    <li>Kami hanya menerbitkan konten yang sudah disetujui redaksi, dan mematuhi pedoman komunitas serta ketentuan
+      pengembang dari setiap platform.</li>
+  </ul>
+
+  <h2>2. Konten</h2>
+  <p>
+    Tulisan, video, grafis, dan data olahan yang diterbitkan abece, Anekdot, dan takardata adalah milik abece, kecuali
+    disebutkan lain. Kutipan singkat boleh dipakai dengan menyebut sumber dan menautkan ke tulisan aslinya. Foto dan
+    materi pihak ketiga mengikuti lisensi yang tercantum di masing-masing tulisan.
+  </p>
+
+  <h2>3. Ketepatan dan koreksi</h2>
+  <p>
+    Kami berusaha menyajikan informasi yang akurat dan mencantumkan sumbernya. Kalau ada kesalahan, kami meralatnya secara
+    terbuka. Konten kami bersifat informasi umum, bukan nasihat profesional.
+  </p>
+
+  <h2>4. Perubahan dan kontak</h2>
+  <p>
+    Ketentuan ini dapat diperbarui sewaktu-waktu, dengan tanggal pembaruan tercantum di atas. Ketentuan ini tunduk pada
+    hukum Republik Indonesia. Pertanyaan: <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>.
+  </p>
+
+  <hr />
+  <h2 lang="en">Terms of Service (English)</h2>
+  <div lang="en">
+    <p>
+      These terms cover abece's websites (abece.my.id, anekdot.id) and our internal publishing tool, <strong>abece</strong>
+      (pub.abece.my.id).
+    </p>
+    <ul>
+      <li>abece is an internal tool for scheduling and publishing content to social media accounts owned by abece
+        (Anekdot and takardata). Only authorized members of the abece editorial team may use it.</li>
+      <li>Each account is connected by its owner through the platform's official authorization screen (TikTok,
+        Instagram, Facebook, Threads, YouTube) and can be disconnected at any time from the platform's settings.</li>
+      <li>We only publish editorially approved content and follow each platform's community guidelines and developer
+        terms.</li>
+      <li>Content published by abece, Anekdot and takardata belongs to abece unless stated otherwise. Short quotes are
+        welcome with attribution and a link to the original.</li>
+      <li>Our content is general information, not professional advice. We correct errors openly.</li>
+      <li>These terms are governed by the laws of the Republic of Indonesia. Contact:
+        <a href={`mailto:${site.contact.email}`}>{site.contact.email}</a>.</li>
+    </ul>
+  </div>
+</Legal>
