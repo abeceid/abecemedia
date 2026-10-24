@@ -10,9 +10,43 @@
     "url": "https://anekdot.id/",
     "cta": "Kunjungi anekdot.id",
     "links": [
-      { "label": "YouTube", "url": "https://www.youtube.com/@anekdot_id" },
-      { "label": "Instagram", "url": "https://www.instagram.com/anekdot.id/" },
-      { "label": "TikTok", "url": "https://www.tiktok.com/@anekdot.id" }
+      {
+        "label": "YouTube",
+        "url": "https://www.youtube.com/@anekdot_id"
+      },
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/anekdot.id/"
+      },
+      {
+        "label": "TikTok",
+        "url": "https://www.tiktok.com/@anekdot.id"
+      },
+      {
+        "label": "Threads",
+        "url": "https://www.threads.com/@anekdot.id"
+      }
+    ]
+  },
+  {
+    "slug": "takardata",
+    "name": "takardata",
+    "tagline": "Cerita dalam angka",
+    "since": 2026,
+    "description": "Jurnalisme data dari keseharian Indonesia: angka resmi seperti data BPS, disajikan dengan takaran yang pas.",
+    "logo": "/assets/takardata_logo.svg",
+    "color": "#16130F",
+    "url": "https://www.instagram.com/takardata.id/",
+    "cta": "Lihat di Instagram",
+    "links": [
+      {
+        "label": "TikTok",
+        "url": "https://www.tiktok.com/@takardata.id"
+      },
+      {
+        "label": "Threads",
+        "url": "https://www.threads.com/@takardata.id"
+      }
     ]
   }
 ]
